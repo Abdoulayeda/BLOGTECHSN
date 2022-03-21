@@ -1,0 +1,92 @@
+<% include ./master/header %> 
+
+<div class="container">
+    <section class="container-fluid pt-grid-gutter">
+        <div class="row">
+          <div class="col-xl-3 col-sm-6 mb-grid-gutter"><a class="card h-100" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.127618928312!2d-17.444969349344863!3d14.761839277011356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10d1a95baeb51%3A0xf94ed05d2a824f9c!2sEcole%20Unit%C3%A9%2016%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1644523902471!5m2!1sfr!2ssn" data-scroll>
+              <div class="card-body text-center"><i class="ci-location h3 mt-2 mb-4 text-primary"></i>
+                <h3 class="h6 mb-2">Address</h3>
+                <p class="fs-sm text-muted">Dakar: PAU16</p>
+                <div class="fs-sm text-primary">
+                    voir le lieu<i class="ci-arrow-right align-middle ms-1"></i></div>
+              </div></a></div>
+          <div class="col-xl-3 col-sm-6 mb-grid-gutter">
+            <div class="card h-100">
+              <div class="card-body text-center"><i class="ci-time h3 mt-2 mb-4 text-primary"></i>
+                <h3 class="h6 mb-3">Ouvert</h3>
+                <ul class="list-unstyled fs-sm text-muted mb-0">
+                  <li>Lundi - Vendredi: 8AM - 7PM</li>
+                  <li class="mb-0">Samedi: 11AM - 5PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-grid-gutter">
+            <div class="card h-100">
+              <div class="card-body text-center"><i class="ci-phone h3 mt-2 mb-4 text-primary"></i>
+                <h3 class="h6 mb-3">Téléphone</h3>
+                <ul class="list-unstyled fs-sm mb-0">
+                  <li><span class="text-muted me-1">Direction:</span><a class="nav-link-style" href="tel:+108044357260">+221 78 277 71 40</a></li>
+                  <li class="mb-0"><span class="text-muted me-1">Service:</span><a class="nav-link-style" href="tel:+100331697720">+221 77 000 00 00</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-grid-gutter">
+            <div class="card h-100">
+              <div class="card-body text-center"><i class="ci-mail h3 mt-2 mb-4 text-primary"></i>
+                <h3 class="h6 mb-3">Adresse email </h3>
+                <ul class="list-unstyled fs-sm mb-0">
+                  <li><span class="text-muted me-1">Direction:</span><a class="nav-link-style" href="mailto:abdoulayeda93@gmail.com">abdoulayeda93@gmail.com</a></li>
+                  <li class="mb-0"><span class="text-muted me-1">Service client:</span><a class="nav-link-style" href="mailto:serviceclient@gmail.com">serviceclient@gmail.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Split section: Map + Contact form-->
+      <div class="container-fluid px-0 mb-4" id="map">
+        <div class="row g-0">
+          <div class="col-lg-6 iframe-full-height-wrap">
+            <iframe class="iframe-full-height" width="600" height="250" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.127618928312!2d-17.444969349344863!3d14.761839277011356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10d1a95baeb51%3A0xf94ed05d2a824f9c!2sEcole%20Unit%C3%A9%2016%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1644523902471!5m2!1sfr!2ssn"></iframe>
+          </div>
+          <div class="col-lg-6 px-4 px-xl-5 py-5 border-top">
+            <h2 class="h4 mb-4">Envoyer un message</h2>
+            <form class="needs-validation mb-3" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label" for="cf-name">Nom:&nbsp;<span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" id="cf-name" placeholder="Votre nom" required>
+                  <div class="invalid-feedback">S'il vous plait entrez votre nom!</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="cf-email">Email:&nbsp;<span class="text-danger">*</span></label>
+                  <input class="form-control" type="email" id="cf-email" placeholder="votre email" required>
+                  <div class="invalid-feedback">Entrez votre email s'il vous plait!</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="cf-phone">Téléphone:&nbsp;<span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" id="cf-phone" placeholder="+221 78 277 71 40" required>
+                  <div class="invalid-feedback">Entrez votre numéro téléphone s'il vous plait!</div>'
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="cf-subject">Objet:</label>
+                  <input class="form-control" type="text" id="cf-subject" placeholder="L'objet de votre message">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="cf-message">Message:&nbsp;<span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="cf-message" rows="6" placeholder="votre message" required></textarea>
+                  <div class="invalid-feedback">Entrez un mesage!</div>
+                  <button class="btn btn-primary mt-4" type="submit">Envoyer</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+<% include ./master/footer %>

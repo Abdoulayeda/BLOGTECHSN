@@ -1,0 +1,33 @@
+<% include ../master/header %> 
+
+<div class="container">
+  <button class="btn btn-accent mt-2 active">
+    <a href="/create"><h5>Creer un article</h5></a>
+    </button>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Publié le</th>
+            <th>Dernier modification</th>
+            <th></th>
+            <th>Action</th>
+        </thead>
+
+        <tbody>
+          <% for(article of articles) {%> 
+            <tr>
+                <td><%= article.titre  %> </td>
+                <td><%= article.auteur  %> </td>
+                <td><%= article.created_at.format('DD-MM-YYYY à hh:mm:ss') %> </td>
+                <td><%= article.updated_at.format('DD-MM-YYYY à hh:mm:ss') %> </td>
+                <td> <a href="/update/<%= article.id  %>" ><i class="ci ci-edit btn btn-warning"></i></a></td>
+                <td><a href="/delete/<%= article.id %>"> <i class="ci ci-trash btn btn-danger"></i></a></td>
+            </tr>
+          <% } %> 
+        </tbody>
+    </table>
+</div>
+
+<% include ../master/footer %> 

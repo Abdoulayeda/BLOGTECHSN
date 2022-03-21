@@ -1,0 +1,30 @@
+<% include ./master/header %> 
+
+<div class="container col-lg-12 mt-3">
+  <h1> <%= article.titre %> </h1> 
+  <div class="card-title row col-lg-7 ">
+    <div class="col-lg-1">
+     Auteur:
+    </div>
+    <div class="col-lg-1">
+     <%= article.auteur %> 
+    </div>
+    <div class="col-lg-10">
+      <span>Ecrit le <%= article.created_at.format('DD-MM-YYYY à hh:mm:ss')%> Modifié le  <%=article.updated_at.format('DD-MM-YYYY à hh:mm:ss') %> %> </span><br>
+      <span> </span>
+
+    </div>
+   </div>  
+   <div class="card-img">
+    <img src="../images/<%= article.image %>" width="100%" height="50%"> 
+
+   </div>
+    <div class="card-text">
+      <%= article.contenu %> 
+    </div>
+      
+
+</div>
+
+
+<% include ./master/footer %> 

@@ -1,0 +1,22 @@
+<% include ../master/header %>
+
+<div class="container">
+ 
+<div class="center">
+  <form action="/create" method="post" enctype="multipart/form-data"  class="form-group mt-5 mb-5 col-lg-6">
+    <label for="">Titre</label>
+    <input type="text" name="titre" class="form-control">
+    <label for="" >resume</label>
+    <input type="text" name="resume" class="form-control">
+    <label for="">image</label>
+    <input type="file" name="image"class="form-control">
+    <label for="">Contenu</label>
+    <textarea name="contenu" class="form-control" ></textarea>
+    <label for="">Auteur</label>
+    <input type="text" name="auteur" class="form-control">
+    <button class="btn btn-primary mt-2 col-4" >Enregister</button>
+  </form>
+</div>
+ 
+</div>
+<% include ../master/footer %>

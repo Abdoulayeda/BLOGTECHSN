@@ -1,0 +1,67 @@
+<% include ./master/header %>
+
+<main class="page-wrapper">
+
+<div class="container pb-5 mb-2 mb-md-4">
+  <h1>La liste de tous les articles</h1>
+
+<div class="row row-cols-lg-2 row-cols-md-3 row-cols-sm-2 row-cols-1 gy-sm-4 gy-3 pt-sm-3">
+
+<% for(article of articles) { %> 
+  <div class="col-lg-4 mb-2">
+    <article class="card h-100 border-0 shadow">
+      <div class="card-body">
+        <h2 class="product-title mb-2 fs-base d-block text-truncate">
+            <%= article.titre %>
+        </h2>  
+      </div>
+      <div class="card-img-top position-relative overflow-hidden">
+        <a class="d-block" href="/show/<%= article.id  %>">
+          <img src="../images/<%= article.image %>" alt="Product image">
+        </a>
+        <!-- Countdown timer-->
+        <div class="badge bg-dark m-3 fs-sm position-absolute top-0 start-0 zindex-5">
+          <i class="ci-time me-1"></i>
+          <div class="countdown d-inline" data-countdown="12/31/2022 12:00:00 PM">
+          <%=  article.created_at.fromNow() %>
+          </div>
+        </div>
+       
+      </div>
+      <div class="card-body">
+        <h3 class="product-title mb-2 fs-base">
+          <a class="d-block text-truncate" href="/show/<%= article.id  %>">
+            <%= article.resume %>
+          </a>
+        </h3>        
+      </div>
+      <div class="card-footer mt-n1 py-0 border-0">
+        <div class="d-flex align-items-center position-relative mb-1 py-3 border-top">
+          <img class="me-2 rounded-circle" src="./images/01.png" width="32" alt="Avatar">
+          <a class="nav-link-style fs-sm stretched-link" href="#"><%= article.auteur %></a></div>
+      </div>
+    </article>
+  </div>
+ 
+<% } %> 
+</div>
+
+<!-- Pagination: basic example -->
+ <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a href="/articles?page=1" class="page-link">Début</a>
+      </li> 
+      <% for(page in total) {%>
+     <li class="page-item">
+        <a href="/articles?page=<%= parseInt(page, 10)+1  %> " class="page-link"> <%= parseInt(page, 10)+1 %> </a>
+      </li>
+      <% } %> 
+      <li class="page-item">
+        <a href="/articles?page=<%=parseInt(page, 10)+1 %> " class="page-link">Fin</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</main>
+<% include ./master/footer %>
